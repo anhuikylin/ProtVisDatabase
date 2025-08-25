@@ -10,4 +10,5 @@ devtools::install_github("anhuikylin/ProtVisDatabase")
 
 ```{r}
 library(ProtVisDatabase)
+ProtVisDatabase::Arabidopsis_thaliana_id
 ```
