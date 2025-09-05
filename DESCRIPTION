@@ -1,6 +1,6 @@
 Package: ProtVisDatabase
 Type: Package
-Title: Protein Visualization and Annotation Database for Arabidopsis thaliana..
+Title: Protein Visualization and Annotation Database for Arabidopsis thaliana.
 Version: 0.0.1
 Authors@R: c(
     person(
