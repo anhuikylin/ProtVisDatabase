@@ -1,7 +1,7 @@
 Package: ProtVisDatabase
 Type: Package
 Title: Protein Visualization and Annotation Database for Arabidopsis thaliana
-Version: 0.1.0
+Version: 0.0.1
 Authors@R: c(
     person(
       "Fei", "Liang",
@@ -10,13 +10,7 @@ Authors@R: c(
       comment = c(ORCID = "0009-0002-8775-2565")
     )
   )
-Description: Provides a comprehensive identifier mapping database for the model plant
-    Arabidopsis thaliana, sourced from UniProt. This package is designed to facilitate
-    the integration and visualization of proteomics data by offering easy access to
-    cross-references between UniProt entries and numerous external databases (e.g.,
-    Gene IDs, Gene Names, RefSeq, Ensembl). The dataset serves as a foundational
-    resource for bioinformatics workflows requiring protein identifier conversion and
-    annotation.
+Description: Provide an enriched file database for species cleaning.
 License: MIT + file LICENSE
 URL: https://github.com/yourgithubname/ProtVisDatabase # 替换为您的仓库地址
 BugReports: https://github.com/yourgithubname/ProtVisDatabase/issues # 替换为您的仓库地址

@@ -1,0 +1,16 @@
+#' Plant KEGG Background
+#'
+#' A background annotation dataset for plant KEGG pathways and Brite hierarchies,
+#' derived from TBtools (2020-07-24 release).
+#'
+#' @format A data.table with N rows and 6 columns:
+#' \describe{
+#'   \item{K_number}{KEGG Orthology (KO) identifier, e.g., "K11374"}
+#'   \item{Description}{Gene/protein name and functional annotation, e.g., "ELP2; elongator complex protein 2"}
+#'   \item{Pathway_code}{KEGG pathway identifier, e.g., "03016"}
+#'   \item{Pathway_name}{KEGG pathway description, e.g., "Transfer RNA biogenesis"}
+#'   \item{Pathway_class}{KEGG functional class, e.g., "09182 Protein families: genetic information processing"}
+#'   \item{Hierarchy}{KEGG Brite hierarchy category, e.g., "A09180 Brite Hierarchies"}
+#' }
+#' @source Extracted from TBtools KEGG background database (2020-07-24).
+"Plant_KEGG_Background"
