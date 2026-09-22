@@ -1,21 +1,24 @@
 Package: ProtVisDatabase
 Type: Package
-Title: Protein Visualization and Annotation Database for Arabidopsis thaliana..
-Version: 0.0.1
+Title: Versioned Data Resources for ProtVis
+Version: 0.1.0
 Authors@R: c(
     person(
       "Fei", "Liang",
-      email = "1264284076@qq.com",
+      email = "fyliangfei@163.com",
       role = c("aut", "cre"),
       comment = c(ORCID = "0009-0002-8775-2565")
     )
   )
-Description: Provide an enriched file database for species cleaning.
+Description: Provides the versioned, locally installed example files,
+    reference backgrounds, benchmark assets, and templates used by the
+    'ProtVis' package. Files are grouped by workflow and accessed through a
+    stable path interface, so 'ProtVis' does not download data at runtime.
 License: MIT + file LICENSE
-URL: https://github.com/yourgithubname/ProtVisDatabase # 替换为您的仓库地址
-BugReports: https://github.com/yourgithubname/ProtVisDatabase/issues # 替换为您的仓库地址
+URL: https://github.com/anhuikylin/ProtVisDatabase
+BugReports: https://github.com/anhuikylin/ProtVisDatabase/issues
 Encoding: UTF-8
-LazyData: true
+LazyData: false
 LazyDataCompression: xz
 Depends: 
     R (>= 4.1.0)
@@ -25,3 +28,4 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: knitr
 RoxygenNote: 7.3.2
+Config/testthat/edition: 3
