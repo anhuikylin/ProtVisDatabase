@@ -1,7 +1,7 @@
 Package: ProtVisDatabase
 Type: Package
 Title: Versioned Data Resources for ProtVis
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(
       "Fei", "Liang",

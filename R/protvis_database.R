@@ -9,8 +9,22 @@
 #'   and the resource is absent.
 #' @export
 protvis_database_path <- function(..., must_work = FALSE) {
-  path <- system.file(..., package = "ProtVisDatabase")
-  if (isTRUE(must_work) && (!nzchar(path) || !file.exists(path))) {
+  components <- list(...)
+  installed_path <- system.file(..., package = "ProtVisDatabase")
+  package_root <- find.package("ProtVisDatabase", quiet = TRUE)
+  source_path <- if (nzchar(package_root)) {
+    do.call(file.path, c(list(package_root, "inst"), components))
+  } else {
+    ""
+  }
+  candidates <- unique(c(installed_path, source_path))
+  candidates <- candidates[nzchar(candidates) & file.exists(candidates)]
+  path <- if (length(candidates)) {
+    normalizePath(candidates[[1L]], winslash = "/", mustWork = TRUE)
+  } else {
+    ""
+  }
+  if (isTRUE(must_work) && !nzchar(path)) {
     requested <- file.path(...)
     stop(
       "ProtVisDatabase resource is unavailable: ", requested,

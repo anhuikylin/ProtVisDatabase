@@ -17,5 +17,6 @@ returns a data frame of packaged file paths, categories, sizes, and SHA-256 chec
 }
 \description{
 Locates versioned resources installed with \pkg{ProtVisDatabase}; it never
-downloads data at runtime.
+downloads data at runtime. The same lookup also supports the package source
+layout used during development, where resources remain below \code{inst/}.
 }
