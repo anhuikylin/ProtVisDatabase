@@ -1,0 +1,57 @@
+name: Restore Sage binaries
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/restore-sage-binaries.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ProtVisDatabase
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore complete Sage executables from ProtVis history
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SRC="https://raw.githubusercontent.com/anhuikylin/ProtVis/d2fb2208f6c84698a463556ed0c9ba018f29b252/inst/extdata/sage"
+          DST="inst/extdata/search_engines/sage"
+
+          mkdir -p "$DST/Linux" "$DST/macOS/ARM64" "$DST/macOS/Intel" "$DST/windows"
+
+          curl --fail --location --retry 3 --output "$DST/Linux/sage" "$SRC/Linux/sage"
+          curl --fail --location --retry 3 --output "$DST/macOS/ARM64/sage" "$SRC/macOS/ARM64/sage"
+          curl --fail --location --retry 3 --output "$DST/macOS/Intel/sage" "$SRC/macOS/Intel/sage"
+          curl --fail --location --retry 3 --output "$DST/windows/sage.exe" "$SRC/windows/sage.exe"
+
+          chmod +x "$DST/Linux/sage" "$DST/macOS/ARM64/sage" "$DST/macOS/Intel/sage"
+
+          test "$(wc -c < "$DST/Linux/sage")" -eq 10022912
+          test "$(wc -c < "$DST/macOS/ARM64/sage")" -eq 15724818
+          test "$(wc -c < "$DST/macOS/Intel/sage")" -eq 17983256
+          test "$(wc -c < "$DST/windows/sage.exe")" -eq 13948928
+
+          echo "9815a42556adbb03d69ba772eaacf972242e20cc2bc0ee4ce21c6f9a688d7f81  $DST/Linux/sage" | sha256sum -c -
+          echo "7e457a288124a25da216e90ae0b9c301a4ed8774536d031ca72ce964520903ea  $DST/macOS/ARM64/sage" | sha256sum -c -
+          echo "b78326f913244057944cfee91a1da8974bcf975043932b18ec6f6577416c56c3  $DST/macOS/Intel/sage" | sha256sum -c -
+          echo "bdcadd26c540640b79239515166b8934be6039b52061f686d2857ab663fd4b02  $DST/windows/sage.exe" | sha256sum -c -
+
+      - name: Commit restored binaries and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/restore-sage-binaries.yml
+          git config user.name "liangfei"
+          git config user.email "103125590+anhuikylin@users.noreply.github.com"
+          git add inst/extdata/search_engines/sage .github/workflows/restore-sage-binaries.yml
+          git commit -m "Restore complete Sage executables"
+          git push origin HEAD:main
