@@ -1,0 +1,26 @@
+field	value
+benchmark_id	maize_kac_peptideatlas_2023_09
+dataset	Maize PeptideAtlas 2023-09
+organism	Zea mays
+peptide	VGYNPDKIAFVPISGFEGDNMIER
+modified_peptide	VGYNPDK[Acetyl]IAFVPISGFEGDNMIER
+modification	N6-acetyl-L-lysine (Kac)
+modified_residue	K
+modified_position	7
+mass_shift_da	42.010565
+precursor_mz	904.110900
+precursor_charge	3
+peptideatlas_probability	1.0000
+consensus_replicates	100/1056
+consensus_dot	0.93,0.03;0/100
+consensus_fraction_assigned_peaks	0.847
+collision_energy	27.0
+best_raw_spectrum	qe2_03102014_14_o2.28787.28787
+primary_maize_protein	Zm00001eb285220_P003
+protein_mappings	1/36/Zm00001eb285220_P003(pre=K,post=S)/tr|A0A1D6M1G1|A0A1D6M1G1_MAIZE(pre=K,post=S)/tr|A0A1D6M1N8|A0A1D6M1N8_MAIZE(pre=K,post=S)/tr|A0A1D6M1I0|A0A1D6M1I0_MAIZE(pre=K,post=S)/tr|A0A1D6M1Q1|A0A1D6M1Q1_MAIZE(pre=K,post=S)/tr|A0A1D6M1P7|A0A1D6M1P7_MAIZE(pre=K,post=S)/tr|A0A1D6FMH6|A0A1D6FMH6_MAIZE(pre=K,post=S)/tr|A0A1D6M1J3|A0A1D6M1J3_MAIZE(pre=K,post=S)/Zm00001eb285450_P002(pre=K,post=S)/tr|A0A1D6M1G2|A0A1D6M1G2_MAIZE(pre=K,post=S)/Zm00001eb285220_P002(pre=K,post=S)/Zm00001eb346230_P001(pre=K,post=S)/Zm00001eb346230_P002(pre=K,post=S)/Zm00001eb285230_P001(pre=K,post=S)/Zm00001eb346210_P003(pre=K,post=S)/Zm00001eb346210_P004(pre=K,post=S)/Zm00001eb285210_P001(pre=K,post=S)/Zm00001eb285210_P003(pre=K,post=S)/tr|A0A1D6FMI2|A0A1D6FMI2_MAIZE(pre=K,post=S)/AC233866.1_FGP006(pre=K,post=S)/GRMZM2G154218_P01(pre=K,post=S)/GRMZM2G149768_P01(pre=K,post=S)/GRMZM2G110509_P01(pre=K,post=S)/NP_001105617.1(pre=K,post=S)/NP_001288407.1(pre=K,post=S)/tr|A0A1D6M1J2|A0A1D6M1J2_MAIZE(pre=K,post=S)/tr|A0A1D6FMH5|A0A1D6FMH5_MAIZE(pre=K,post=S)/GRMZM2G151193_P02(pre=K,post=S)/tr|A0A1D6M1J0|A0A1D6M1J0_MAIZE(pre=K,post=S)/tr|A0A1D6FMH8|A0A1D6FMH8_MAIZE(pre=K,post=S)/tr|A0A1D6FMJ3|A0A1D6FMJ3_MAIZE(pre=K,post=S)/tr|A0A1D6FMI7|A0A1D6FMI7_MAIZE(pre=K,post=S)/tr|A0A1D6FMH9|A0A1D6FMH9_MAIZE(pre=K,post=S)/tr|A0A1D6FMJ0|A0A1D6FMJ0_MAIZE(pre=K,post=S)/tr|A0A1D6M1G3|A0A1D6M1G3_MAIZE(pre=K,post=S)/tr|A0A1D6M1Q6|A0A1D6M1Q6_MAIZE(pre=K,post=S)
+supporting_pxd_ids	PXD002379;PXD003634;PXD009627;PXD015819;PXD017077;PXD019635;PXD019804;PXD022863;PXD024698;PXD026269;PXD026369;PXD026378;PXD026760;PXD026853;PXD027417
+library_entry	VGYNPDK[Acetyl]IAFVPISGFEGDNMIER/3 (HCD)
+library_num_peaks	150
+peptideatlas_build	https://peptideatlas.org/builds/maize/202308/
+source_library	https://peptideatlas.org/builds/maize/202308/maize_2023-08_all_HR-HCD.sptxt.gz
+paper_doi	10.1021/acs.jproteome.4c00320
