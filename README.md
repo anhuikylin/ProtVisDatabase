@@ -24,6 +24,8 @@ Installing `ProtVis` also declares `ProtVisDatabase` as a required dependency.
 - `gsea`: reference assets for the DEP and GSEA workflows.
 - `expression`, `structure`, and `raw_search`: module-specific demonstrations
   and templates.
+- `ptm/maize_kac`: the compact Maize PeptideAtlas lysine-acetylation
+  benchmark spectrum and provenance metadata.
 - `search_engines/sage`: platform-specific Sage executables used by the local
   search workflow, distributed with the upstream MIT licence.
 
